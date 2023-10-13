@@ -7,12 +7,41 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>ChatGPT Style Blink Cursor</title>
+    <style>
+      .text-container {
+        position: relative;
+        padding: 100px;
+        border: 1px solid gray;
+        margin-top: 20%;
+      }
+      .cursor {
+        position: absolute;
+        top: 4px;
+        left: 3px;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        background: #333;
+        animation: blink 1s infinite;
+      }
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="text-container">
       <div class="text"></div>
       <div class="cursor"></div>
     </div>
-    <script src="./index.js"></script>
+    <script src="./index.ts"></script>
   </body>
 </html>

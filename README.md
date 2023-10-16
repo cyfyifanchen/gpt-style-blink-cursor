@@ -4,7 +4,7 @@
 
 ## Usage
 
-`typeWrite()` takes 4 parameters:
+`typeWrite()` takes 4 arguments:
 
 1. `string`: paragraph content
 2. `string`: `HTML` content container

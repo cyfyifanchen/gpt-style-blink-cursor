@@ -4,12 +4,14 @@ const txtWrapper = document.querySelector('.text-container')
 const txtSingle = document.querySelector('.text')
 const cursor = document.querySelector('.cursor')
 
+//  Simulates typing a text string with a cursor effect in a specified container.
 async function typeWriter(
   str,
   txtWrapperSelector,
   txtSingleSelector,
   cursorSelector
 ) {
+  // Provides a delay in code execution for a specified duration.
   function delay(duration) {
     return new Promise((resolve) => {
       setTimeout(() => {
@@ -18,6 +20,7 @@ async function typeWriter(
     })
   }
 
+  // Formats a text string by wrapping it in HTML <p> tags.
   function transfer(text) {
     return text
       .split('\n')
@@ -25,6 +28,7 @@ async function typeWriter(
       .join('')
   }
 
+  // Finds the last text node within an HTML element or its children.
   function getLastTextNode(node) {
     if (node.nodeType === Node.TEXT_NODE) {
       return node
@@ -40,6 +44,7 @@ async function typeWriter(
     return null
   }
 
+  // Updates the position of a blinking cursor on the page.
   function updateCursor() {
     const lastTextNode = getLastTextNode(txtSingle)
     const textNode = document.createTextNode('z')

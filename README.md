@@ -1,6 +1,6 @@
 # ChatGPT styled blinking cursor
 
-![](./images/blinking-cursor.gif)
+![](./images/blink-cursor.gif)
 
 ## Usage
 
